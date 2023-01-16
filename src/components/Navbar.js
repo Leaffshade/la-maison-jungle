@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.png";
 import "../styles/Navbar.css";
 import "../App.css";
 import { useState } from "react";
@@ -13,7 +14,10 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} `}>
-      <div className="navbar_logo">Logo</div>
+      <div className="lmj-banner">
+        <img src={logo} alt="La maison jungle" className="lmj-logo" />
+      </div>
+
       <ul className="navbar_links">
         <li className="navbar_item slideInDown-1">
           <a href="/" className="navbar_link">
@@ -44,7 +48,7 @@ function Navbar() {
 
       {
         <div className="search">
-          <input type="text" placeholder="Search..." />
+          <input type="text" id="input_search" placeholder="Search..." />
           {<button>Search</button>}
           <button>
             <FontAwesomeIcon icon={faMagnifyingGlass} />

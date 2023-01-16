@@ -8,6 +8,12 @@ button:hover {
   cursor: pointer;
 }
 
+.lmj-logo {
+  width: 35px;
+  left: 10px;
+  position: relative;
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +46,14 @@ button:hover {
 }
 
 @media screen and (max-width: 767px) {
+  .lmj-logo {
+    width: 40px;
+  }
+
+  #input_search {
+    width: 99px;
+  }
+
   .navbar_links {
     flex-direction: column;
     justify-content: center;
@@ -53,12 +67,34 @@ button:hover {
     visibility: hidden;
     background-color: #192342;
     transition: all 0.8s ease-out;
+    top: 70px;
   }
 
   .show-nav .navbar_links {
     width: 100vw;
     right: 0;
     visibility: visible;
+  }
+
+  .navbar_links :hover {
+    width: 100%;
+    /* min-height: 100px; */
+
+    /* background: #50597b; */
+    /* width: 150%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: block; */
+    /* decoration: none; */
+    /* margin-left: 2px;
+    margin-right: 2px; */
+  }
+
+  li.navbar_item:hover {
+    width: 150%;
+    background: #50597b;
+    display: grid;
   }
 
   .navbar_item::after {
